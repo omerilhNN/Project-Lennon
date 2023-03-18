@@ -1,9 +1,9 @@
+using GameDevTV.Utils;
+using RPG.Attributes;
 using RPG.Combat;
 using RPG.Core;
 using RPG.Movement;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace RPG.Control
@@ -25,17 +25,27 @@ namespace RPG.Control
 
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceArrivedAtWaypoint = Mathf.Infinity;
-        Vector3 guardPosition;
+
+        LazyValue<Vector3> guardPosition;
+        
         int currentWaypointIndex = 0;
 
-        private void Start()
+        private void Awake()
         {
             fighter = GetComponent<Fighter>();
             health = GetComponent<Health>();
             mover = GetComponent<Mover>();
             player = GameObject.FindWithTag("Player");
 
-            guardPosition = transform.position;
+            guardPosition = new LazyValue<Vector3>(GetGuardPosition);
+        }
+        private Vector3 GetGuardPosition()
+        {
+            return transform.position;
+        }
+        private void Start()
+        {
+            guardPosition.ForceInit();
         }
         private void Update()
         {
@@ -67,7 +77,7 @@ namespace RPG.Control
 
         private void PatrolBehaviour()
         {
-            Vector3 nextPosition = guardPosition;
+            Vector3 nextPosition = guardPosition.value;
             if(patrolPath != null)
             {
                 if(AtWaypoint())//The LOOP about when you are at the waypoint go for the next one.

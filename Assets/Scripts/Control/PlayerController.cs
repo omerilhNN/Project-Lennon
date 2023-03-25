@@ -22,7 +22,7 @@ namespace RPG.Control
         }
         [SerializeField] CursorMapping[] cursorMappings = null;
         [SerializeField] float maxNavMeshProjectionDistance = 1f;
-        [SerializeField] float maxPathLength = 40f;
+        [SerializeField] float raycastRadius = 1f;
 
         private void Awake()
         {
@@ -74,7 +74,7 @@ namespace RPG.Control
         }
         RaycastHit[] RaycastAllSorted()
         {
-            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            RaycastHit[] hits = Physics.SphereCastAll(GetMouseRay(),raycastRadius);
             float[] distances = new float[hits.Length];
            
             for (int i = 0; i < hits.Length; i++)
@@ -90,13 +90,12 @@ namespace RPG.Control
   
         private bool InteractWithMovement()
         {
-      
-
             Vector3 target;
             bool hasHit = RaycastNavMesh(out target);
             
             if (hasHit)
             {
+                if (!GetComponent<Mover>().CanMoveTo(target)) return false;
                 if(Input.GetMouseButton(0))
                 {
                     GetComponent<Mover>().StartMoveAction(target,1f);
@@ -121,27 +120,11 @@ namespace RPG.Control
                 hit.point, out navMeshHit,maxNavMeshProjectionDistance,NavMesh.AllAreas);
             if (!hasCastToNavMesh) return false;
 
-            target = navMeshHit.position;
-
-            NavMeshPath navMeshPath = new NavMeshPath();
-            bool hasPath = NavMesh.CalculatePath(transform.position, target, NavMesh.AllAreas, navMeshPath);
-            if(!hasPath) return false;
-            if(navMeshPath.status != NavMeshPathStatus.PathComplete) return false;//In order to prevent path calculation to the ROOFTOPS.
-            if (GetPathLength(navMeshPath) > maxPathLength) return false;//When the destination is way far off from our position.
-
+            target = navMeshHit.position;            
             return true;
         }
 
-        private float GetPathLength(NavMeshPath navMeshPath)
-        {//Summation of these path corners in the navMeshPath.
-            float total = 0;
-            if (navMeshPath.corners.Length < 2) return total; //When there is just 1 line with 2 corners return 0;.
-            for (int i = 0; i < navMeshPath.corners.Length - 1; i++)
-            {
-                total += Vector3.Distance(navMeshPath.corners[i], navMeshPath.corners[i+1]);
-            }
-            return total;
-        }
+        
 
         private void SetCursor(CursorType type)
         {

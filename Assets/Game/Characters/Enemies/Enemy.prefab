@@ -139,13 +139,45 @@ PrefabInstance:
       propertyPath: health
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 222967129510577647, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 222967129510577647, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 222967129510577647, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 5831492765804097225}
+    - target: {fileID: 222967129510577647, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 222967129510577647, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Aggrevate
+      objectReference: {fileID: 0}
+    - target: {fileID: 222967129510577647, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RPG.Control.AIController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 222967129510577647, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1804646640349945132, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2168406953845502117, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638991542563504299, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
+      propertyPath: maxSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4638991542563504300, guid: 1df9361e939455e47a5d387a8ce3a54e, type: 3}
       propertyPath: m_Speed

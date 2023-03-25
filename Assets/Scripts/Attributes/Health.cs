@@ -49,6 +49,7 @@ namespace RPG.Attributes
             if (_health.value == 0)
             {
                 onDie.Invoke();//Invoke die SFX when health equals 0;
+                gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
                 Die();
                 AwardExperience(instigator);
             }

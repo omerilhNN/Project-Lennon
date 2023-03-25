@@ -56,31 +56,31 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Asset Packs\AQUAS-Lite\Scripts\AQUAS_Lite_Reflection.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\Portal.cs" />
     <Compile Include="Assets\Scripts\Combat\EnemyHealthDisplay.cs" />
     <Compile Include="Assets\Scripts\Stats\Stats.cs" />
     <Compile Include="Assets\Scripts\Attributes\HealthDisplay.cs" />
     <Compile Include="Assets\Scripts\Cinematics\CinematicTrigger.cs" />
-    <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeTransforms.cs" />
     <Compile Include="Assets\Scripts\Combat\Weapon.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\Fader.cs" />
     <Compile Include="Assets\Scripts\UI\DamageText\DamageTextSpawner.cs" />
-    <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeBase.cs" />
     <Compile Include="Assets\Scripts\Control\Mover.cs" />
     <Compile Include="Assets\Scripts\Core\ActionScheduler.cs" />
     <Compile Include="Assets\Scripts\Stats\Progression.cs" />
     <Compile Include="Assets\Scripts\Stats\CharacterClass.cs" />
+    <Compile Include="Assets\Asset Packs\AQUAS-Lite\Scripts\AQUAS_Lite_Camera.cs" />
     <Compile Include="Assets\Scripts\Attributes\Health.cs" />
     <Compile Include="Assets\Scripts\Saving\ISaveable.cs" />
     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\LazyValue.cs" />
     <Compile Include="Assets\Scripts\Stats\Experience.cs" />
     <Compile Include="Assets\Scripts\Core\CameraFacing.cs" />
-    <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeBox.cs" />
     <Compile Include="Assets\Scripts\Control\AIController.cs" />
     <Compile Include="Assets\Scripts\Combat\Fighter.cs" />
     <Compile Include="Assets\Scripts\Combat\WeaponPickup.cs" />
     <Compile Include="Assets\Scripts\Control\PatrolPath.cs" />
     <Compile Include="Assets\Scripts\Cinematics\CinematicControlRemover.cs" />
+    <Compile Include="Assets\Asset Packs\AQUAS-Lite\Scripts\AQUAS_Lite_CamNav.cs" />
     <Compile Include="Assets\Scripts\Control\IRaycastable.cs" />
     <Compile Include="Assets\Scripts\Core\PersistentObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\Saving\SaveableEntity.cs" />
@@ -92,18 +92,14 @@
     <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
     <Compile Include="Assets\Scripts\Combat\WeaponConfig.cs" />
     <Compile Include="Assets\Scripts\Stats\IModifierProvider.cs" />
-    <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\Core\FlagEnumAttribute.cs" />
     <Compile Include="Assets\Scripts\Saving\SerializableVector3.cs" />
     <Compile Include="Assets\Scripts\UI\DamageText\DamageText.cs" />
-    <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeHelper.cs" />
     <Compile Include="Assets\Scripts\Control\CursorType.cs" />
     <Compile Include="Assets\Scripts\Saving\SavingSystem.cs" />
     <Compile Include="Assets\Scripts\Stats\ExperienceDisplay.cs" />
     <Compile Include="Assets\Scripts\Attributes\HealthBar.cs" />
-    <Compile Include="Assets\IgniteCoders\Simple Water Shader\Resources\WaterReflection.cs" />
     <Compile Include="Assets\Scripts\Stats\LevelDisplay.cs" />
     <Compile Include="Assets\Scripts\Stats\BaseStats.cs" />
-    <Compile Include="Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WateverVolumeFloater.cs" />
     <Compile Include="Assets\Scripts\Core\DestroyAfterEffect.cs" />
     <Compile Include="Assets\Scripts\UI\Destroyer.cs" />
   </ItemGroup>
@@ -114,11 +110,14 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
     <None Include="Assets\Asset Packs\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
+    <None Include="Assets\Asset Packs\EmaceArt\Slavic World Free\Plugin\Grass.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Asset Packs\Animations by Explosive\README - Usage Rights for these assets 1.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Asset Packs\AQUAS-Lite\Shaders\AQUAS-Lite_Frontface.shader" />
     <None Include="Assets\Asset Packs\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
+    <None Include="Assets\Asset Packs\AQUAS-Lite\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -128,6 +127,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Asset Packs\AQUAS-Lite\Shaders\AQUAS-Lite_Backface.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
